@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config>
+	<directionDetection>
+		<averageSlopeWidth>7</averageSlopeWidth>
+		<slopeMinReference>0.0008</slopeMinReference>
+		<slopeMaxReference>0.005</slopeMaxReference>
+		<maxBrightness>0.4</maxBrightness>
+		<maxNerveTractWidth>20</maxNerveTractWidth>
+		<minBrightness>0.1</minBrightness>
+	</directionDetection>
+	<clustering>
+		<maxDirectionDiff>0.75</maxDirectionDiff>
+		<widthOverlook>2</widthOverlook>
+		<lengthOverlook>3</lengthOverlook>
+		<maxWidthExpansion>2</maxWidthExpansion>
+		<maxPosCorrection>2</maxPosCorrection>
+		<circuitRange>1</circuitRange>
+		<neededInCircuit>4</neededInCircuit>
+	</clustering>
+	<clusterMerge>
+		<maxDirectionDiff>0.05</maxDirectionDiff>
+		<minOverlappingPixels>3</minOverlappingPixels>
+	</clusterMerge>
+</config>

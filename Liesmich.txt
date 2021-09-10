@@ -1,0 +1,11 @@
+Beispielaufrufe:
+python3 ./main.py images/Test/part.tif config.xml
+oder
+python3 ./main.py images/Test/part2.tif config_part2.xml
+
+Es sollte sich dann die Grafische Oberfläche öffnen. 
+Durch die Radiobuttons kann gewählt werden welches Bild angzeigt werden soll.
+Wird "singleCluster" gewählt, können in der Combobox die Cluster durchgewechselt werden.
+Über den Config-Button kann die Konfiguration verändert werden. Änderungen werden persistent in der XML-Datei gespeichert.
+
+

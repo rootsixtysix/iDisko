@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config>
+	<directionDetection>	<!-- Durchlaeufe in unterschiedliche Richtungen um Richtungen der Nervenbahnen zu erkennen -->
+		<averageSlopeWidth>7</averageSlopeWidth>	<!-- Anzahl der Pixel über die die Steigung (der Helligkeit berechnet wird) -->
+		<slopeMinReference>0.0008</slopeMinReference>	<!-- Minimale Steigung in eine Nervenbahn -->
+		<slopeMaxReference>0.0025</slopeMaxReference>	<!-- Maximale Steigung in eine Nervenbahn -->
+		<minBrightness>0.0</minBrightness>				<!-- Minimale Helligkeit innerhalb einer Nervenbahn -->
+		<maxBrightness>1.0</maxBrightness>				<!-- Maximale Helligkeit innerhalb einer Nervenbahn -->
+		<maxNerveTractWidth>20</maxNerveTractWidth>		<!-- Maximale Breite einer Nervenbahn -->
+	</directionDetection>
+	<clustering>	<!-- Bilden von Zusammenhaengenden Clustern -->
+		<maxDirectionDiff>0.6</maxDirectionDiff>	<!-- Maximal erlaubte abweichung von der Richtung der bisherigen Nervenbahn 
+			0.1 = 36Grad -->
+		<widthOverlook>2</widthOverlook>			<!-- Wenn ein Pixel nicht zur Nervenbahn gehoert, suche trotzdem in der Breite 
+			weiter (wegen einzelner Fehlerpixel) -->
+		<lengthOverlook>2</lengthOverlook>			<!-- Wenn ein Pixel nicht zur Nervenbahn gehoert, suche trotzdem in der Laenge 
+			weiter (wegen einzelner Fehlerpixel) -->
+		<maxWidthExpansion>2</maxWidthExpansion>	<!-- Beim suchen in der Breite wird maximal soviele Pixel über der Durchschnitsbreite 
+			gesucht (verhindern dass cluster zu schnell breit wird) -->
+		<maxPosCorrection>2</maxPosCorrection>		<!-- Maximale erlaubte Verschiebung in der Breite (drift verhindern) -->
+		<circuitRange>1</circuitRange>				<!-- Pixel im Umkreis mit betrachten -->
+		<neededInCircuit>4</neededInCircuit>		<!-- Wenn circuitRange gesetzt ist, müssen innerhalb des Umkreises so viele 
+			Pixel ins Cluter Passen, damit das eigentliche Pixel genommen wird -->
+	</clustering>
+	<clusterMerge>	<!-- Zusammenfuegen zusammengehoeriger Cluster -->
+		<maxDirectionDiff>0.05</maxDirectionDiff>	<!-- Wird diese Abweichung in der durchschnittlichen Richtung ueberschritten, gehoeren die Cluster nicht zusammen 0.1 = 36Grad -->
+		<minOverlappingPixels>3</minOverlappingPixels> <!-- So viele Pixel muessen sich mindestens uberdecken, damit Cluster zusammengehoeren -->
+	</clusterMerge>
+</config>
